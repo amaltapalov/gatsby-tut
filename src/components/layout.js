@@ -1,5 +1,5 @@
 import React from "react"
-import { NavLink } from "gatsby"
+import { Link } from "gatsby"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
@@ -17,6 +17,7 @@ export default ({ children }) => (
         <ListLink to="/">Home</ListLink>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
+        <ListLink to="/about-css-modules/">About CSS</ListLink>
       </ul>
     </header>
     {children}

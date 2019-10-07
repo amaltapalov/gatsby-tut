@@ -21,7 +21,8 @@
     "react-dom": "^16.10.2",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
-    "typography-theme-fairy-gates": "^0.16.19"
+    "typography-theme-fairy-gates": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
