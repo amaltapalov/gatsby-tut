@@ -4,8 +4,6 @@ import styles from "./about-css-modules.module.css"
 
 import Container from "../components/container"
 
-console.log(styles)
-
 // inline component
 const User = props => (
   <div className={styles.user}>
