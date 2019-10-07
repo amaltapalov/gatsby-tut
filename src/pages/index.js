@@ -14,7 +14,10 @@ export default ({ data }) => {
             <Link to={node.fields.slug}>
               <h3>
                 {node.frontmatter.title} -{" "}
-                <span style={{ color: `#bbb` }}>{node.frontmatter.date}</span>
+                <span style={{ color: `#bbb` }}>{node.frontmatter.date}</span> -
+                <div style={{ fontSize: `0.8rem`, paddingTop: 10 }}>
+                  {node.timeToRead} min
+                </div>
               </h3>
               <p>{node.excerpt}</p>
             </Link>
