@@ -1,0 +1,8 @@
+.container {
+  margin: 3rem auto;
+  max-width: 600px;
+}
+.myImage {
+  border: 2px solid red;
+  border-radius: 10px;
+}
