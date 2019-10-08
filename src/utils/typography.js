@@ -1,5 +1,6 @@
 import Typography from "typography"
-import wordpress2016Theme from "typography-theme-wordpress-2016"
-const typography = new Typography(wordpress2016Theme)
+import elkGlenTheme from 'typography-theme-elk-glen'
+
+const typography = new Typography(elkGlenTheme)
 export const { scale, rhythm, options } = typography
 export default typography

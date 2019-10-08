@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 
+import avatar from "../images/3--beOU3yjg.png"
+
 const Container = styled.div`
   border: 2px solid red;
   border-radius: 10px;
@@ -13,11 +15,16 @@ const Heading = styled.h1`
   font-size: 1.5rem;
 `
 
+const Avatarimg = styled.img`
+  max-width: 100px;
+`
+
 export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
       <Container>
+        <Avatarimg src={avatar} alt="" />
         <Heading>Amazing_pandas</Heading>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -41,12 +48,12 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date}) {
       edges {
         node {
           id
           frontmatter {
-            date
+            date(formatString: "DD MMMM, YYYY")
             title
           }
           fields {
