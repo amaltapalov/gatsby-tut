@@ -5,6 +5,12 @@ import Layout from "../components/layout"
 
 const Container = styled.div`
   border: 2px solid red;
+  border-radius: 10px;
+  padding: 10px;
+`
+const Heading = styled.h1`
+  text-transform: uppercase;
+  font-size: 1.5rem;
 `
 
 export default ({ data }) => {
@@ -12,17 +18,17 @@ export default ({ data }) => {
   return (
     <Layout>
       <Container>
-        <h1>Amazing pandas</h1>
+        <Heading>Amazing_pandas</Heading>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.fields.slug}>
               <h3>
                 {node.frontmatter.title} -{" "}
-                <span style={{ color: `#bbb` }}>{node.frontmatter.date}</span> -
-                <div style={{ fontSize: `0.8rem`, paddingTop: 10 }}>
+                <span style={{ color: `#bbb` }}>{node.frontmatter.date}</span> -{" "}
+                <span style={{ fontSize: `0.8rem`, paddingTop: 10 }}>
                   {node.timeToRead} min
-                </div>
+                </span>
               </h3>
               <p>{node.excerpt}</p>
             </Link>

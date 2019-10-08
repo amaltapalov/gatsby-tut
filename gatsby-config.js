@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `John Doe`,
     description: `A simple description about pandas eating lots...`,
-    author: `gatsbyjs`,
+    author: `Amal Tapalov`,
   },
   plugins: [
     {
